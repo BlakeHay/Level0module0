@@ -21,6 +21,12 @@ if __name__ == '__main__':
     flameSize = 130         # the length of the flaming arms
     
     # Make a new turtle
+    my_turtle = turtle.Turtle()
+
+    my_turtle.shape('turtle')
+    my_turtle.width(2)
+    my_turtle.speed(0)
+
     
     # Make the turtle shape 'turtle', .shape('turtle')
     
@@ -30,7 +36,19 @@ if __name__ == '__main__':
     
     # Use a for loop to repeat all of the code below ONE time (we will change
     # this later)
-        
+    for i in range(25):
+        my_turtle.fillcolor('orange')
+        my_turtle.begin_fill()
+        my_turtle.right(45)
+        my_turtle.forward(64)
+        my_turtle.left(40)
+        my_turtle.forward(flameSize)
+        my_turtle.right(170)
+        my_turtle.forward(flameSize)
+        my_turtle.right(62)
+        my_turtle.forward(baseSize)
+        my_turtle.end_fill()
+    my_turtle.end_fill()
         # Set the turtle .fillcolor() to orange
         
         # Call the turtle .begin_fill() function
