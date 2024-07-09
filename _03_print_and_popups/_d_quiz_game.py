@@ -1,9 +1,32 @@
 from tkinter import messagebox, simpledialog, Tk
 
 # Create an if-main code block, *hint, type main then ctrl+space to auto-complete
-    
+if __name__ == '__main__':
+
+    window = Tk()
+    window.withdraw()
+    score = 0
+    math = simpledialog.askstring(title= "Can You Do Math?" , prompt= "If in a rectangle two non-adjacent corners are 5 inches\n"
+                                                                      " apart. One side length is 3 inches what's the area of the rectangle? ")
+    math2 = simpledialog.askstring(title= "Can You Do Math?" , prompt= "If you had one pie with radius 9 would you trade it for two pies with radius 6?")
+    math3 = simpledialog.askstring(title= "Can You Do Math" , prompt= "(3 x (9 % of 5) +3 -4 -7 2 ) x 0"
     # Make a new window variable, window = Tk()
-    
+    if math == "12":
+        messagebox.showinfo(message= "Correct, score +1")
+        score = score + 1
+        if math2 == "no":
+            messagebox.showinfo(message= "Correct, score +1")
+            score = score + 1
+            if math3 == "0":
+                messagebox.showinfo(message= "Correct, score +1")
+                score = score + 1
+
+    else:
+        messagebox.showinfo(message= "incorrect, Ur bad at math")
+
+
+
+
     # Hide the window using the window's .withdraw() method
     
     # 1. Create a variable to hold the user's score. Set it equal to zero. 
@@ -23,3 +46,4 @@ from tkinter import messagebox, simpledialog, Tk
     # remember to convert your variable to a string using the str() function 
     
     # Run the window's .mainloop() method
+    windows.mainloop()
