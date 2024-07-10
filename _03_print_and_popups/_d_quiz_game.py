@@ -7,25 +7,27 @@ if __name__ == '__main__':
     window.withdraw()
     score = 0
     math = simpledialog.askstring(title= "Can You Do Math?" , prompt= "If in a rectangle two non-adjacent corners are 5 inches\n"
-                                                                      " apart. One side length is 3 inches what's the area of the rectangle? ")
-    math2 = simpledialog.askstring(title= "Can You Do Math?" , prompt= "If you had one pie with radius 9 would you trade it for two pies with radius 6?")
-    math3 = simpledialog.askstring(title= "Can You Do Math" , prompt= "(3 x (9 % of 5) +3 -4 -7 2 ) x 0"
+                                                                      " apart and one side length is 3 inches what's the area of the rectangle? ")
+
+
     # Make a new window variable, window = Tk()
     if math == "12":
         messagebox.showinfo(message= "Correct, score +1")
         score = score + 1
+        math2 = simpledialog.askstring(title= "Can You Do Math?" , prompt= "If you had one pie with radius 9 would you trade it for two pies with radius 6?")
         if math2 == "no":
             messagebox.showinfo(message= "Correct, score +1")
             score = score + 1
+            math3 = simpledialog.askstring(title= "Can You Do Math" , prompt= "3 x (9 % of 5) +3 -4 -7 2 ) x 0")
             if math3 == "0":
                 messagebox.showinfo(message= "Correct, score +1")
                 score = score + 1
 
     else:
-        messagebox.showinfo(message= "incorrect, Ur bad at math")
+        messagebox.showinfo(message= "Incorrect, Ur bad at math")
 
 
-
+    messagebox.showinfo(message= "Your final score was "+ str(score)+ ". ")
 
     # Hide the window using the window's .withdraw() method
     
